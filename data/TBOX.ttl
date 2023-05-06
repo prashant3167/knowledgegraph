@@ -1,0 +1,259 @@
+@prefix : <http://www.bdma.sdm#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdm: <http://www.bdma.sdm#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.bdma.sdm#> .
+
+<http://www.bdma.sdm> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.bdma.sdm#field_kk
+sdm:field_kk rdf:type owl:AnnotationProperty ;
+             rdfs:label "kk" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.bdma.sdm#hasproceedings
+sdm:hasproceedings rdf:type owl:ObjectProperty ;
+                   rdfs:domain sdm:Conference ;
+                   rdfs:range sdm:Proceedings ;
+                   rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                   rdfs:label "HasProceedings" .
+
+
+###  http://www.bdma.sdm#hasvolume
+sdm:hasvolume rdf:type owl:ObjectProperty ;
+              rdfs:domain sdm:Journal ;
+              rdfs:range sdm:Volume ;
+              rdfs:isDefinedBy <http://www.bdma.sdm> ;
+              rdfs:label "HasVolume" .
+
+
+###  http://www.bdma.sdm#publishedin
+sdm:publishedin rdf:type owl:ObjectProperty ;
+                rdfs:domain sdm:Paper ;
+                rdfs:range sdm:Publication ;
+                rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                rdfs:label "PublishedIn" .
+
+
+###  http://www.bdma.sdm#reviewfor
+sdm:reviewfor rdf:type owl:ObjectProperty ;
+              rdfs:domain sdm:Review ;
+              rdfs:range sdm:Paper ;
+              rdfs:isDefinedBy <http://www.bdma.sdm> ;
+              rdfs:label "ReviewFor" .
+
+
+###  http://www.bdma.sdm#submittedto
+sdm:submittedto rdf:type owl:ObjectProperty ;
+                rdfs:domain sdm:Paper ;
+                rdfs:range sdm:Venue ;
+                rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                rdfs:label "SubmittedTo" .
+
+
+###  http://www.bdma.sdm#wrotepaper
+sdm:wrotepaper rdf:type owl:ObjectProperty ;
+               rdfs:domain sdm:Author ;
+               rdfs:range sdm:Paper ;
+               rdfs:isDefinedBy <http://www.bdma.sdm> ;
+               rdfs:label "WrotePaper" .
+
+
+###  http://www.bdma.sdm#wrotereview
+sdm:wrotereview rdf:type owl:ObjectProperty ;
+                rdfs:domain sdm:Reviewer ;
+                rdfs:range sdm:Review ;
+                rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                rdfs:label "WroteReview" .
+
+
+###  http://www.bdma.sdm/#handlesconference
+<http://www.bdma.sdm/#handlesconference> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain sdm:Chair ;
+                                         rdfs:range sdm:Conference ;
+                                         rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                                         rdfs:label "HandlesConference" .
+
+
+###  http://www.bdma.sdm/#handlesjournal
+<http://www.bdma.sdm/#handlesjournal> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain sdm:Editor ;
+                                      rdfs:range sdm:Journal ;
+                                      rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                                      rdfs:label "HandlesJournal" .
+
+
+###  http://www.bdma.sdm/#paperrelatedto
+<http://www.bdma.sdm/#paperrelatedto> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain sdm:Paper ;
+                                      rdfs:range <http://www.bdma.sdm/#ResearchArea> ;
+                                      rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                                      rdfs:label "PaperRelatedTo" .
+
+
+###  http://www.bdma.sdm/#venuerelatedto
+<http://www.bdma.sdm/#venuerelatedto> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain sdm:Venue ;
+                                      rdfs:range <http://www.bdma.sdm/#ResearchArea> ;
+                                      rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                                      rdfs:label "VenueRelatedTo" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.bdma.sdm#conferencetype
+sdm:conferencetype rdf:type owl:DatatypeProperty ;
+                   rdfs:domain sdm:Conference ;
+                   rdfs:comment """workshops, symposiums, expert groups or
+regular conferences""" ;
+                   rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                   rdfs:label "ConferenceType" .
+
+
+###  http://www.bdma.sdm#decision
+sdm:decision rdf:type owl:DatatypeProperty ;
+             rdfs:domain sdm:Review ;
+             rdfs:isDefinedBy <http://www.bdma.sdm> ;
+             rdfs:label "Decision" .
+
+
+###  http://www.bdma.sdm#text
+sdm:text rdf:type owl:DatatypeProperty ;
+         rdfs:domain sdm:Review ;
+         rdfs:isDefinedBy <http://www.bdma.sdm> ;
+         rdfs:label "Text" .
+
+
+###  http://www.bdma.sdm#type
+sdm:type rdf:type owl:DatatypeProperty ;
+         rdfs:domain sdm:Paper ;
+         rdfs:comment "Can be full paper, short paper,demo paper and poster(only for conference)" ;
+         rdfs:isDefinedBy <http://www.bdma.sdm> ;
+         rdfs:label "Type" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.bdma.sdm#Author
+sdm:Author rdf:type owl:Class ;
+           rdfs:subClassOf sdm:Person ;
+           rdfs:isDefinedBy <http://www.bdma.sdm> ;
+           rdfs:label "Author" .
+
+
+###  http://www.bdma.sdm#Chair
+sdm:Chair rdf:type owl:Class ;
+          rdfs:subClassOf sdm:Person ;
+          rdfs:isDefinedBy <http://www.bdma.sdm> ;
+          rdfs:label "Chair" .
+
+
+###  http://www.bdma.sdm#Conference
+sdm:Conference rdf:type owl:Class ;
+               rdfs:subClassOf sdm:Venue ;
+               rdfs:isDefinedBy <http://www.bdma.sdm> ;
+               rdfs:label "Conference" .
+
+
+###  http://www.bdma.sdm#Editor
+sdm:Editor rdf:type owl:Class ;
+           rdfs:subClassOf sdm:Person ;
+           rdfs:isDefinedBy <http://www.bdma.sdm> ;
+           rdfs:label "Editor" .
+
+
+###  http://www.bdma.sdm#Journal
+sdm:Journal rdf:type owl:Class ;
+            rdfs:subClassOf sdm:Venue ;
+            rdfs:isDefinedBy <http://www.bdma.sdm> ;
+            rdfs:label "Journal" .
+
+
+###  http://www.bdma.sdm#Paper
+sdm:Paper rdf:type owl:Class ;
+          sdm:field_kk "" ;
+          rdfs:isDefinedBy <http://www.bdma.sdm> ;
+          rdfs:label "Paper" .
+
+
+###  http://www.bdma.sdm#Person
+sdm:Person rdf:type owl:Class ;
+           rdfs:isDefinedBy <http://www.bdma.sdm> ;
+           rdfs:label "Person" .
+
+
+###  http://www.bdma.sdm#Proceedings
+sdm:Proceedings rdf:type owl:Class ;
+                rdfs:subClassOf sdm:Publication ;
+                rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                rdfs:label "Proceedings" .
+
+
+###  http://www.bdma.sdm#Publication
+sdm:Publication rdf:type owl:Class ;
+                rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                rdfs:label "Publication" .
+
+
+###  http://www.bdma.sdm#Review
+sdm:Review rdf:type owl:Class ;
+           rdfs:isDefinedBy <http://www.bdma.sdm> ;
+           rdfs:label "Review" .
+
+
+###  http://www.bdma.sdm#Reviewer
+sdm:Reviewer rdf:type owl:Class ;
+             rdfs:subClassOf sdm:Person ;
+             rdfs:isDefinedBy <http://www.bdma.sdm> ;
+             rdfs:label "Reviewer" .
+
+
+###  http://www.bdma.sdm#Venue
+sdm:Venue rdf:type owl:Class ;
+          rdfs:isDefinedBy <http://www.bdma.sdm> ;
+          rdfs:label "Venue" .
+
+
+###  http://www.bdma.sdm#Volume
+sdm:Volume rdf:type owl:Class ;
+           rdfs:subClassOf sdm:Publication ;
+           rdfs:isDefinedBy <http://www.bdma.sdm> ;
+           rdfs:label "Volume" .
+
+
+###  http://www.bdma.sdm/#ResearchArea
+<http://www.bdma.sdm/#ResearchArea> rdf:type owl:Class ;
+                                    rdfs:comment """conferences, journals
+and papers / publications are related to one or more areas (e.g., machine learning, databases,
+natural language processing, etc.).""" ;
+                                    rdfs:isDefinedBy <http://www.bdma.sdm> ;
+                                    rdfs:label "Research Area" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.bdma.sdm> rdfs:comment "" ;
+                      rdfs:label "TBOX" .
+
+
+###  Generated by the OWL API (version 5.1.17) https://github.com/owlcs/owlapi/
