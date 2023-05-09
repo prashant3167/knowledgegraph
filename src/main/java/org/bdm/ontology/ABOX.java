@@ -6,78 +6,61 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.util.iterator.ExtendedIterator;
 import org.bdm.utils.Constants;
-import org.bdm.utils.Formatter;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Random;
+import java.net.URLEncoder;
 
 public class ABOX {
-    /**
-     * Create schema of
-     */
-    public static void loadInstances() throws IOException {
+    public static void loadArticles() throws IOException {
         Model model = ModelFactory.createDefaultModel().read(Constants.TBOX_MODEL_PATH);
         OntModel ontModel = ModelFactory.createOntologyModel( OntModelSpec.RDFS_MEM_RDFS_INF, model);
         System.out.println(ontModel.listClasses());
         //Classes
         OntClass paperClass = ontModel.getOntClass( Constants.BASE_URI.concat("Paper") );
-//        OntClass paperType = ontModel.getOntClass( Constants.BASE_URI.concat("PaperType") );
         OntClass authorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Author") );
         OntClass volumeClass = ontModel.getOntClass( Constants.BASE_URI.concat("Volume") );
         OntClass journalClass = ontModel.getOntClass( Constants.BASE_URI.concat("Journal") );
+        OntClass reviewerClass = ontModel.getOntClass( Constants.BASE_URI.concat("Reviewer") );
+        OntClass reviewClass = ontModel.getOntClass( Constants.BASE_URI.concat("Review") );
+        OntClass researchAreaClass = ontModel.getOntClass( Constants.BASE_URI.concat("ResearchArea") );
+        OntClass editorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Editor") );
 
-        //Properties
+        //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
         OntProperty hasVolume = ontModel.getOntProperty( Constants.BASE_URI.concat("hasvolume") );
         OntProperty publishedIn = ontModel.getOntProperty( Constants.BASE_URI.concat("publishedin") );
-        OntProperty paperType_property = ontModel.getOntProperty( Constants.BASE_URI.concat("papertypeproperty") );
+        OntProperty submittedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("submittedto") );
+        OntProperty handlesJournal = ontModel.getOntProperty( Constants.BASE_URI.concat("handlesjournal") );
+        OntProperty venueRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("venuerelatedto") );
+        OntProperty paperRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("paperrelatedto") );
+        OntProperty wroteReview = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotereview") );
+        OntProperty reviewFor = ontModel.getOntProperty( Constants.BASE_URI.concat("reviewfor") );
 
-        //ObjectProperty
-//        ObjectProperty test = ontModel.createObjectProperty( Constants.BASE_URI.concat("Type") );
+        //Datatype Properties
+        DatatypeProperty text = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("text"));
+        DatatypeProperty decision = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("decision"));
 
-
-        //Read output_article.csv
+        //Read journal.csv
         BufferedReader csvReader = new BufferedReader(new FileReader(Constants.ARTICLES_PATH));
-        CSVParser parser = CSVFormat.DEFAULT.withDelimiter(';').withHeader().parse(csvReader);
+        CSVParser parser = CSVFormat.DEFAULT.withDelimiter(',').withHeader().parse(csvReader);
 
         int cnt = 0;
         for(CSVRecord record : parser) {
 
             // Article (paper)
-            String paperTitle = record.get("title").replace(" ", "").replace("\"","");
+            String paperTitle = URLEncoder.encode(record.get("title"));
             Individual paperInd = paperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
-            Random rand = new Random();
-//            String ptype = Constants.PAPER_TYPE.get(rand.nextInt(Constants.PAPER_TYPE.size()));
-//            Individual paper_type_property = paperType.createIndividual( Constants.BASE_URI.concat( "jjf" ) );
-//            Resource ptype = model.createOntProperty(Constants.BASE_URI.concat("jvjf"));
-//            ObjectProperty lod = ontModel.createObjectProperty(Constants.BASE_URI.concat("hasLevelOfDetail"));
-            System.out.println(ontModel.listOntProperties());
-//            Object println;
-//            System.out.println(ptype);
-            Property property = model.getProperty("http://www.bdma.sdm#type");
-            Property property_2 = model.getProperty("http://www.bdma.sdm#title");
-            paperInd.addProperty(property,"vf");
-            paperInd.addProperty(property_2,record.get("title"));
-
-            ExtendedIterator<OntProperty> it = ontModel.listOntProperties();
-
-            while (it.hasNext()) {
-                OntProperty ontclass = it.next();
-                System.out.println(ontclass.getLocalName());
-            }
 
             // Journal
-            String journal = Formatter.format(record.get("journal"));
+            String journal = URLEncoder.encode(record.get("journal"));
             Individual journalInd = journalClass.createIndividual(Constants.BASE_URI.concat(journal));
 
             // Volume
-            String volume = Formatter.format(record.get("volume"));
+            String volume = URLEncoder.encode(record.get("volume"));
             // If volume field is empty assign 1
             if(volume.equals(""))
                 volume = "1";
@@ -87,13 +70,51 @@ public class ABOX {
             // HasVolume
             journalInd.addProperty(hasVolume, volumeInd);
 
+            // SubmittedTo
+            paperInd.addProperty(submittedTo, journalInd);
+
+            // Editors
+            String[] editors = record.get("editors").split("\\|");
+            for (String editor : editors) {
+                String e = URLEncoder.encode(editor);
+                // Editor
+                Individual editorInd = editorClass.createIndividual(Constants.BASE_URI.concat(e));
+                // HandlesJournal
+                editorInd.addProperty(handlesJournal, journalInd);
+            }
+
+            // Reviewers
+            String[] reviewers = record.get("reviewers").split("\\|");
+            Individual reviewer1 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[0])));
+            Individual reviewer2 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[1])));
+            //Reviews
+            String text1 = record.get("review_reviewer_0");
+            Individual reviewInd1 = reviewClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(text1)));
+            String text2 = record.get("review_reviewer_1");
+            Individual reviewInd2 = reviewClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(text2)));
+            //WroteReview
+            reviewer1.addProperty(wroteReview, reviewInd1);
+            reviewer2.addProperty(wroteReview, reviewInd2);
+            //ReviewFor
+            reviewInd1.addProperty(reviewFor, paperInd);
+            reviewInd2.addProperty(reviewFor, paperInd);
+            //Decision
+            String decision1 = record.get("decison_reviewer_0");
+            reviewInd1.addProperty(decision, decision1);
+            String decision2 = record.get("decison_reviewer_1");
+            reviewInd2.addProperty(decision, decision2);
+            //Review text
+            reviewInd1.addProperty(text, text1);
+            reviewInd2.addProperty(text, text2);
+
             // PublishedIn
-            paperInd.addProperty(publishedIn, volumeInd);
+            if (decision1.equals("accept") || decision2.equals("accept"))
+                paperInd.addProperty(publishedIn, volumeInd);
 
             // Authors
             String[] authors = record.get("author").split("\\|");
             for (String author : authors) {
-                String a = Formatter.format(author);
+                String a = URLEncoder.encode(author);
                 // Author
                 Individual authorInd = authorClass.createIndividual(Constants.BASE_URI.concat(a));
                 // WrotePaper
@@ -104,7 +125,7 @@ public class ABOX {
             if (++cnt >= Constants.MAX_ARTICLES) break;
         }
 
-        FileOutputStream writerStream = new FileOutputStream( Constants.ABOX_MODEL_PATH );
+        FileOutputStream writerStream = new FileOutputStream( Constants.ARTICLES_OUTPUT );
         model.write(writerStream, "N-TRIPLE");
         writerStream.close();
         System.out.println("I am here");
