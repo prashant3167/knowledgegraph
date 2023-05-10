@@ -47,6 +47,12 @@ public class ABOX {
         //Datatype Properties
         DatatypeProperty text = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("text"));
         DatatypeProperty decision = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("decision"));
+        DatatypeProperty paperTitle = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("paper_title"));
+        DatatypeProperty venueTitle = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("venue_title"));
+        DatatypeProperty volumeProperty = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("volume"));
+        DatatypeProperty fullName = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("fullName"));
+        DatatypeProperty topic = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("topic"));
+        DatatypeProperty publishDate = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("publish_date"));
 
         //Read journal.csv
         BufferedReader csvReader = new BufferedReader(new FileReader(Constants.ARTICLES_PATH));
@@ -56,23 +62,26 @@ public class ABOX {
         for(CSVRecord record : parser) {
 
             // Article (paper)
-            String paperTitle = URLEncoder.encode(record.get("title"));
+            String paper = URLEncoder.encode(record.get("title"));
             String paperType = record.get("paper_type");
             Individual paperInd = null;
-                if (paperType.equals("Full Paper"))
-                    paperInd = fullPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
-                else if (paperType.equals("Short Paper"))
-                    paperInd = shortPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
-                else if (paperType.equals("Demo Paper"))
-                    paperInd = demoPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
-                else if (paperType.equals("Poster"))
-                    paperInd = posterClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
-                else
-                    paperInd = paperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+            if (paperType.equals("Full Paper"))
+                paperInd = fullPaperClass.createIndividual(Constants.BASE_URI.concat(paper));
+            else if (paperType.equals("Short Paper"))
+                paperInd = shortPaperClass.createIndividual(Constants.BASE_URI.concat(paper));
+            else if (paperType.equals("Demo Paper"))
+                paperInd = demoPaperClass.createIndividual(Constants.BASE_URI.concat(paper));
+            else if (paperType.equals("Poster"))
+                paperInd = posterClass.createIndividual(Constants.BASE_URI.concat(paper));
+            else
+                paperInd = paperClass.createIndividual(Constants.BASE_URI.concat(paper));
+            paperInd.addProperty(paperTitle, record.get("title"));
+            paperInd.addProperty(publishDate, record.get("mdate"));
 
             // Journal
             String journal = URLEncoder.encode(record.get("journal"));
             Individual journalInd = journalClass.createIndividual(Constants.BASE_URI.concat(journal));
+            journalInd.addProperty(venueTitle, record.get("journal"));
 
             // Volume
             String volume = URLEncoder.encode(record.get("volume"));
@@ -81,6 +90,7 @@ public class ABOX {
                 volume = "1";
             // Volume is journal title _ volume
             Individual volumeInd = volumeClass.createIndividual(Constants.BASE_URI.concat(journal + "_" + volume));
+            volumeInd.addProperty(volumeProperty, record.get("volume"));
 
             // HasVolume
             journalInd.addProperty(hasVolume, volumeInd);
@@ -96,17 +106,20 @@ public class ABOX {
                 Individual editorInd = editorClass.createIndividual(Constants.BASE_URI.concat(e));
                 // HandlesJournal
                 editorInd.addProperty(handlesJournal, journalInd);
+                editorInd.addProperty(fullName, editor);
             }
 
             // Reviewers
             String[] reviewers = record.get("reviewers").split("\\|");
             Individual reviewer1 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[0])));
             Individual reviewer2 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[1])));
+            reviewer1.addProperty(fullName, reviewers[0]);
+            reviewer2.addProperty(fullName, reviewers[1]);
             //Reviews
             String text1 = record.get("review_reviewer_0");
-            Individual reviewInd1 = reviewClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(text1)));
+            Individual reviewInd1 = reviewClass.createIndividual(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[0])+"_"+paper));
             String text2 = record.get("review_reviewer_1");
-            Individual reviewInd2 = reviewClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(text2)));
+            Individual reviewInd2 = reviewClass.createIndividual(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[1])+"_"+paper));
             //WroteReview
             reviewer1.addProperty(wroteReview, reviewInd1);
             reviewer2.addProperty(wroteReview, reviewInd2);
@@ -134,6 +147,7 @@ public class ABOX {
                 Individual authorInd = authorClass.createIndividual(Constants.BASE_URI.concat(a));
                 // WrotePaper
                 authorInd.addProperty(wrotePaper, paperInd);
+                authorInd.addProperty(fullName, author);
             }
 
             // Research areas
@@ -145,6 +159,7 @@ public class ABOX {
                 Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 paperInd.addProperty(paperRelatedTo, researchAreaInd);
+                researchAreaInd.addProperty(topic, keyword);
             }
             // Journal
             String[] journal_keywords = record.get("journal_keywords").split("\\|");
@@ -154,6 +169,7 @@ public class ABOX {
                 Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 journalInd.addProperty(venueRelatedTo, researchAreaInd);
+                researchAreaInd.addProperty(topic, keyword);
             }
 
             // Limit number of articles loaded
