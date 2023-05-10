@@ -21,6 +21,10 @@ public class ABOX {
         System.out.println(ontModel.listClasses());
         //Classes
         OntClass paperClass = ontModel.getOntClass( Constants.BASE_URI.concat("Paper") );
+        OntClass fullPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("FullPaper") );
+        OntClass shortPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("ShortPaper") );
+        OntClass demoPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("DemoPaper") );
+        OntClass posterClass = ontModel.getOntClass( Constants.BASE_URI.concat("Poster") );
         OntClass authorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Author") );
         OntClass volumeClass = ontModel.getOntClass( Constants.BASE_URI.concat("Volume") );
         OntClass journalClass = ontModel.getOntClass( Constants.BASE_URI.concat("Journal") );
@@ -53,7 +57,18 @@ public class ABOX {
 
             // Article (paper)
             String paperTitle = URLEncoder.encode(record.get("title"));
-            Individual paperInd = paperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+            String paperType = record.get("paper_type");
+            Individual paperInd = null;
+                if (paperType.equals("Full Paper"))
+                    paperInd = fullPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+                else if (paperType.equals("Short Paper"))
+                    paperInd = shortPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+                else if (paperType.equals("Demo Paper"))
+                    paperInd = demoPaperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+                else if (paperType.equals("Poster"))
+                    paperInd = posterClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
+                else
+                    paperInd = paperClass.createIndividual(Constants.BASE_URI.concat(paperTitle));
 
             // Journal
             String journal = URLEncoder.encode(record.get("journal"));
