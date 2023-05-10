@@ -136,6 +136,26 @@ public class ABOX {
                 authorInd.addProperty(wrotePaper, paperInd);
             }
 
+            // Research areas
+            // Paper
+            String[] keywords = record.get("paper_keywords").split("\\|");
+            for (String keyword : keywords) {
+                String k = URLEncoder.encode(keyword);
+                // ResearchArea
+                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                // WrotePaper
+                paperInd.addProperty(paperRelatedTo, researchAreaInd);
+            }
+            // Journal
+            String[] journal_keywords = record.get("journal_keywords").split("\\|");
+            for (String keyword : journal_keywords) {
+                String k = URLEncoder.encode(keyword);
+                // ResearchArea
+                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                // WrotePaper
+                journalInd.addProperty(venueRelatedTo, researchAreaInd);
+            }
+
             // Limit number of articles loaded
             if (++cnt >= Constants.MAX_ARTICLES) break;
         }
