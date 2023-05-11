@@ -23,7 +23,7 @@ public class ConferenceAbox {
         OntClass paperClass = ontModel.getOntClass( Constants.BASE_URI.concat("Paper") );
 
         OntClass authorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Author") );
-        OntClass conferenceClass = ontModel.getOntClass( Constants.BASE_URI.concat("ConferenceAbox") );
+        OntClass conferenceClass = ontModel.getOntClass( Constants.BASE_URI.concat("Conference") );
         OntClass proceedingsClass = ontModel.getOntClass( Constants.BASE_URI.concat("Proceedings") );
         OntClass reviewerClass = ontModel.getOntClass( Constants.BASE_URI.concat("Reviewer") );
         OntClass reviewClass = ontModel.getOntClass( Constants.BASE_URI.concat("Review") );
