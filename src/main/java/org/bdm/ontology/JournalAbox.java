@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URLEncoder;
 
-public class ABOX {
+public class JournalAbox {
     public static void loadArticles() throws IOException {
         Model model = ModelFactory.createDefaultModel().read(Constants.TBOX_MODEL_PATH);
         OntModel ontModel = ModelFactory.createOntologyModel( OntModelSpec.RDFS_MEM_RDFS_INF, model);
