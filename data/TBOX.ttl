@@ -145,77 +145,88 @@ sdm:wrotereview rdf:type owl:ObjectProperty ;
 sdm:decision rdf:type owl:DatatypeProperty ;
              rdfs:domain sdm:Review ;
              rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-             rdfs:label "Decision" .
+             rdfs:label "Decision" ;
+             rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#fullName
 sdm:fullName rdf:type owl:DatatypeProperty ;
              rdfs:domain sdm:Person ;
              rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-             rdfs:label "full name" .
+             rdfs:label "full name" ;
+             rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#paper_title
 sdm:paper_title rdf:type owl:DatatypeProperty ;
                 rdfs:domain sdm:Paper ;
                 rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-                rdfs:label "paper_title" .
+                rdfs:label "paper_title" ;
+                rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#publicaton_year
-sdm:publicaton_year rdf:type owl:DatatypeProperty ;
+sdm:publication_year rdf:type owl:DatatypeProperty ;
                     rdfs:domain sdm:Proceedings ;
                     rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-                    rdfs:label "publicaton_year" .
+                    rdfs:label "publication_year" ;
+                    rdfs:range xsd:integer .
 
 
 ###  http://www.bdma.sdm#publish_date
 sdm:publish_date rdf:type owl:DatatypeProperty ;
                  rdfs:domain sdm:Paper ;
                  rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-                 rdfs:label "publish_date" .
+                 rdfs:label "publish_date" ;
+                 rdfs:range xsd:date .
 
 
 ###  http://www.bdma.sdm#text
 sdm:text rdf:type owl:DatatypeProperty ;
          rdfs:domain sdm:Review ;
          rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-         rdfs:label "Text" .
+         rdfs:label "Text" ;
+         rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#topic
 sdm:topic rdf:type owl:DatatypeProperty ;
           rdfs:domain sdm:ResearchArea ;
           rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-          rdfs:label "topic" .
+          rdfs:label "topic" ;
+          rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#url
 sdm:url rdf:type owl:DatatypeProperty ;
         rdfs:domain sdm:Paper ;
         rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-        rdfs:label "url" .
+        rdfs:label "url" ;
+        rdfs:range xsd:anyURI .
 
 
 ###  http://www.bdma.sdm#venue_title
 sdm:venue_title rdf:type owl:DatatypeProperty ;
                 rdfs:domain sdm:Venue ;
                 rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-                rdfs:label "venue_title" .
+                rdfs:label "venue_title" ;
+                rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#volume
 sdm:volume rdf:type owl:DatatypeProperty ;
            rdfs:domain sdm:Volume ;
            rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-           rdfs:label "volume" .
+           rdfs:label "volume" ;
+           rdfs:range xsd:string .
 
 
 ###  http://www.bdma.sdm#key
 <http://www.bdma.sdm#key> rdf:type owl:DatatypeProperty ;
                            rdfs:domain sdm:Paper ;
                            rdfs:isDefinedBy <http://www.bdma.sdm#> ;
-                           rdfs:label "key" .
+                           rdfs:label "key" ;
+                           rdfs:range xsd:string .
 
 
 #################################################################

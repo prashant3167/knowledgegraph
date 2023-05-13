@@ -65,6 +65,8 @@ public class ConferenceAbox {
         DatatypeProperty fullName = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("fullName"));
         DatatypeProperty topic = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("topic"));
         DatatypeProperty publishDate = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("publish_date"));
+        DatatypeProperty url = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("url"));
+        DatatypeProperty key = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("key"));
 
         //Read journal.csv
         BufferedReader csvReader = new BufferedReader(new FileReader(Constants.CONFERENCE_PATH));
@@ -202,6 +204,10 @@ public class ConferenceAbox {
                 conferenceInd.addProperty(venueRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
             }
+
+            // Additional properties
+            paperInd.addProperty(key, record.get("key"));
+            paperInd.addProperty(url, record.get("ee"));
 
             // Limit number of articles loaded
             if (++cnt >= Constants.MAX_ARTICLES) break;
