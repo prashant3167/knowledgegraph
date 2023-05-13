@@ -41,13 +41,15 @@ public class ConferenceAbox {
         OntClass workshopClass = ontModel.getOntClass( Constants.BASE_URI.concat("Workshop") );
         OntClass symposiumClass = ontModel.getOntClass( Constants.BASE_URI.concat("Symposium") );
         OntClass expertGroupClass = ontModel.getOntClass( Constants.BASE_URI.concat("ExpertGroup") );
-
+        OntClass submissionClass = ontModel.getOntClass( Constants.BASE_URI.concat("Submission") );
 
         //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
         OntProperty HasProceedings = ontModel.getOntProperty( Constants.BASE_URI.concat("hasproceedings") );
         OntProperty publishedIn = ontModel.getOntProperty( Constants.BASE_URI.concat("publishedin") );
-        OntProperty submittedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("submittedto") );
+        OntProperty inSubmission = ontModel.getOntProperty( Constants.BASE_URI.concat("insubmission") );
+        OntProperty toVenue = ontModel.getOntProperty( Constants.BASE_URI.concat("tovenue") );
+        OntProperty supervises = ontModel.getOntProperty( Constants.BASE_URI.concat("supervises") );
         OntProperty handlesConference = ontModel.getOntProperty( Constants.BASE_URI.concat("handlesconference") );
         OntProperty venueRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("venuerelatedto") );
         OntProperty paperRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("paperrelatedto") );
@@ -117,8 +119,15 @@ public class ConferenceAbox {
             // HasProceedings
             conferenceInd.addProperty(HasProceedings, proceedingsInd);
 
-            // SubmittedTo
-            paperInd.addProperty(submittedTo, conferenceInd);
+            // Submission
+            Individual submissionInd = submissionClass.createIndividual(Constants.BASE_URI.concat("submission_"+paper+"_"+conference));
+            paperInd.addProperty(inSubmission, submissionInd);
+            submissionInd.addProperty(toVenue, conferenceInd);
+
+            // Supervisor
+            String supervisor = URLEncoder.encode(record.get("supervisor"));
+            Individual supervisorInd = chairClass.createIndividual(Constants.BASE_URI.concat(supervisor));
+            supervisorInd.addProperty(supervises, submissionInd);
 
             // Chairs
             String[] chairs = record.get("chair").split("\\|");
@@ -146,8 +155,8 @@ public class ConferenceAbox {
             reviewer1.addProperty(wroteReview, reviewInd1);
             reviewer2.addProperty(wroteReview, reviewInd2);
             //ReviewFor
-            reviewInd1.addProperty(reviewFor, paperInd);
-            reviewInd2.addProperty(reviewFor, paperInd);
+            reviewInd1.addProperty(reviewFor, submissionInd);
+            reviewInd2.addProperty(reviewFor, submissionInd);
             //Decision
             String decision1 = record.get("decison_reviewer_0");
             reviewInd1.addProperty(decision, decision1);

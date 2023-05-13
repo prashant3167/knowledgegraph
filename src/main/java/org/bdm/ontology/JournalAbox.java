@@ -32,12 +32,15 @@ public class JournalAbox {
         OntClass reviewClass = ontModel.getOntClass( Constants.BASE_URI.concat("Review") );
         OntClass researchAreaClass = ontModel.getOntClass( Constants.BASE_URI.concat("ResearchArea") );
         OntClass editorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Editor") );
+        OntClass submissionClass = ontModel.getOntClass( Constants.BASE_URI.concat("Submission") );
 
         //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
         OntProperty hasVolume = ontModel.getOntProperty( Constants.BASE_URI.concat("hasvolume") );
         OntProperty publishedIn = ontModel.getOntProperty( Constants.BASE_URI.concat("publishedin") );
-        OntProperty submittedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("submittedto") );
+        OntProperty inSubmission = ontModel.getOntProperty( Constants.BASE_URI.concat("insubmission") );
+        OntProperty toVenue = ontModel.getOntProperty( Constants.BASE_URI.concat("tovenue") );
+        OntProperty supervises = ontModel.getOntProperty( Constants.BASE_URI.concat("supervises") );
         OntProperty handlesJournal = ontModel.getOntProperty( Constants.BASE_URI.concat("handlesjournal") );
         OntProperty venueRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("venuerelatedto") );
         OntProperty paperRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("paperrelatedto") );
@@ -95,8 +98,15 @@ public class JournalAbox {
             // HasVolume
             journalInd.addProperty(hasVolume, volumeInd);
 
-            // SubmittedTo
-            paperInd.addProperty(submittedTo, journalInd);
+            // Submission
+            Individual submissionInd = submissionClass.createIndividual(Constants.BASE_URI.concat("submission_"+paper+"_"+journal));
+            paperInd.addProperty(inSubmission, submissionInd);
+            submissionInd.addProperty(toVenue, journalInd);
+
+            // Supervisor
+            String supervisor = URLEncoder.encode(record.get("supervisor"));
+            Individual supervisorInd = editorClass.createIndividual(Constants.BASE_URI.concat(supervisor));
+            supervisorInd.addProperty(supervises, submissionInd);
 
             // Editors
             String[] editors = record.get("editors").split("\\|");
@@ -124,8 +134,8 @@ public class JournalAbox {
             reviewer1.addProperty(wroteReview, reviewInd1);
             reviewer2.addProperty(wroteReview, reviewInd2);
             //ReviewFor
-            reviewInd1.addProperty(reviewFor, paperInd);
-            reviewInd2.addProperty(reviewFor, paperInd);
+            reviewInd1.addProperty(reviewFor, submissionInd);
+            reviewInd2.addProperty(reviewFor, submissionInd);
             //Decision
             String decision1 = record.get("decison_reviewer_0");
             reviewInd1.addProperty(decision, decision1);
