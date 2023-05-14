@@ -44,6 +44,7 @@ public class JournalAbox {
         OntProperty handlesJournal = ontModel.getOntProperty( Constants.BASE_URI.concat("handlesjournal") );
         OntProperty venueRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("venuerelatedto") );
         OntProperty paperRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("paperrelatedto") );
+        OntProperty publicationRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("publicationrelatedto") );
         OntProperty wroteReview = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotereview") );
         OntProperty reviewFor = ontModel.getOntProperty( Constants.BASE_URI.concat("reviewfor") );
 
@@ -90,11 +91,7 @@ public class JournalAbox {
 
             // Volume
             String volume = URLEncoder.encode(record.get("volume"));
-            // If volume field is empty assign 1
-            if(volume.equals(""))
-                volume = "1";
-            // Volume is journal title _ volume
-            Individual volumeInd = volumeClass.createIndividual(Constants.BASE_URI.concat(journal + "_" + volume));
+            Individual volumeInd = volumeClass.createIndividual(Constants.BASE_URI.concat(volume));
             volumeInd.addProperty(volumeProperty, record.get("volume"));
 
             // HasVolume
@@ -181,6 +178,17 @@ public class JournalAbox {
                 Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 journalInd.addProperty(venueRelatedTo, researchAreaInd);
+                researchAreaInd.addProperty(topic, keyword);
+            }
+
+            // Volume
+            String[] volume_keywords = record.get("volume_keywords").split("\\|");
+            for (String keyword : volume_keywords) {
+                String k = URLEncoder.encode(keyword);
+                // ResearchArea
+                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                // WrotePaper
+                volumeInd.addProperty(publicationRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
             }
 

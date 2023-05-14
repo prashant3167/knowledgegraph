@@ -53,6 +53,7 @@ public class ConferenceAbox {
         OntProperty handlesConference = ontModel.getOntProperty( Constants.BASE_URI.concat("handlesconference") );
         OntProperty venueRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("venuerelatedto") );
         OntProperty paperRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("paperrelatedto") );
+        OntProperty publicationRelatedTo = ontModel.getOntProperty( Constants.BASE_URI.concat("publicationrelatedto") );
         OntProperty wroteReview = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotereview") );
         OntProperty reviewFor = ontModel.getOntProperty( Constants.BASE_URI.concat("reviewfor") );
 
@@ -194,7 +195,7 @@ public class ConferenceAbox {
                 paperInd.addProperty(paperRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
             }
-            // Journal
+            // Conference
             String[] journal_keywords = record.get("conference_keywords").split("\\|");
             for (String keyword : journal_keywords) {
                 String k = URLEncoder.encode(keyword);
@@ -202,6 +203,17 @@ public class ConferenceAbox {
                 Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 conferenceInd.addProperty(venueRelatedTo, researchAreaInd);
+                researchAreaInd.addProperty(topic, keyword);
+            }
+
+            // Proceedings
+            String[] proceedingsKeywords = record.get("proceedings_keywords").split("\\|");
+            for (String keyword : proceedingsKeywords) {
+                String k = URLEncoder.encode(keyword);
+                // ResearchArea
+                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                // WrotePaper
+                proceedingsInd.addProperty(publicationRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
             }
 
