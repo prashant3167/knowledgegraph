@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sdm: <http://www.bdma.sdm#>
+SELECT ?title WHERE {
+    ?paper sdm:publishedin ?proceedings ;
+          	sdm:paper_title ?title .
+    ?conference sdm:hasproceedings ?proceedings .
+    ?conference sdm:venuerelatedto ?researcharea .
+    ?researcharea sdm:topic "Big data" .
+    ?author sdm:wrotepaper ?paper ;
+            sdm:fullName "Albert Bifet" .
+}
