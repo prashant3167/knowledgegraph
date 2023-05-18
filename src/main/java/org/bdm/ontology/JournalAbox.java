@@ -6,6 +6,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
 import org.bdm.utils.Constants;
 
 import java.io.BufferedReader;
@@ -25,14 +26,7 @@ public class JournalAbox {
         OntClass shortPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("ShortPaper") );
         OntClass demoPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("DemoPaper") );
         OntClass posterClass = ontModel.getOntClass( Constants.BASE_URI.concat("Poster") );
-        OntClass authorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Author") );
-        OntClass volumeClass = ontModel.getOntClass( Constants.BASE_URI.concat("Volume") );
         OntClass journalClass = ontModel.getOntClass( Constants.BASE_URI.concat("Journal") );
-        OntClass reviewerClass = ontModel.getOntClass( Constants.BASE_URI.concat("Reviewer") );
-        OntClass reviewClass = ontModel.getOntClass( Constants.BASE_URI.concat("Review") );
-        OntClass researchAreaClass = ontModel.getOntClass( Constants.BASE_URI.concat("ResearchArea") );
-        OntClass editorClass = ontModel.getOntClass( Constants.BASE_URI.concat("Editor") );
-        OntClass submissionClass = ontModel.getOntClass( Constants.BASE_URI.concat("Submission") );
 
         //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
@@ -91,20 +85,20 @@ public class JournalAbox {
 
             // Volume
             String volume = URLEncoder.encode(record.get("volume"));
-            Individual volumeInd = volumeClass.createIndividual(Constants.BASE_URI.concat(volume));
+            Resource volumeInd = ontModel.createResource(Constants.BASE_URI.concat(volume));
             volumeInd.addProperty(volumeProperty, record.get("volume"));
 
             // HasVolume
             journalInd.addProperty(hasVolume, volumeInd);
 
             // Submission
-            Individual submissionInd = submissionClass.createIndividual(Constants.BASE_URI.concat("submission_"+paper+"_"+journal));
+            Resource submissionInd = ontModel.createResource(Constants.BASE_URI.concat("submission_"+paper+"_"+journal));
             paperInd.addProperty(inSubmission, submissionInd);
             submissionInd.addProperty(toVenue, journalInd);
 
             // Supervisor
             String supervisor = URLEncoder.encode(record.get("supervisor"));
-            Individual supervisorInd = editorClass.createIndividual(Constants.BASE_URI.concat(supervisor));
+            Resource supervisorInd = ontModel.createResource(Constants.BASE_URI.concat(supervisor));
             supervisorInd.addProperty(supervises, submissionInd);
 
             // Editors
@@ -112,7 +106,7 @@ public class JournalAbox {
             for (String editor : editors) {
                 String e = URLEncoder.encode(editor);
                 // Editor
-                Individual editorInd = editorClass.createIndividual(Constants.BASE_URI.concat(e));
+                Resource editorInd = ontModel.createResource(Constants.BASE_URI.concat(e));
                 // HandlesJournal
                 editorInd.addProperty(handlesJournal, journalInd);
                 editorInd.addProperty(fullName, editor);
@@ -120,15 +114,15 @@ public class JournalAbox {
 
             // Reviewers
             String[] reviewers = record.get("reviewers").split("\\|");
-            Individual reviewer1 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[0])));
-            Individual reviewer2 = reviewerClass.createIndividual(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[1])));
+            Resource reviewer1 = ontModel.createResource(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[0])));
+            Resource reviewer2 = ontModel.createResource(Constants.BASE_URI.concat(URLEncoder.encode(reviewers[1])));
             reviewer1.addProperty(fullName, reviewers[0]);
             reviewer2.addProperty(fullName, reviewers[1]);
             //Reviews
             String text1 = record.get("review_reviewer_0");
-            Individual reviewInd1 = reviewClass.createIndividual(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[0])+"_"+paper));
+            Resource reviewInd1 = ontModel.createResource(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[0])+"_"+paper));
             String text2 = record.get("review_reviewer_1");
-            Individual reviewInd2 = reviewClass.createIndividual(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[1])+"_"+paper));
+            Resource reviewInd2 = ontModel.createResource(Constants.BASE_URI.concat("review_"+URLEncoder.encode(reviewers[1])+"_"+paper));
             //WroteReview
             reviewer1.addProperty(wroteReview, reviewInd1);
             reviewer2.addProperty(wroteReview, reviewInd2);
@@ -153,7 +147,7 @@ public class JournalAbox {
             for (String author : authors) {
                 String a = URLEncoder.encode(author);
                 // Author
-                Individual authorInd = authorClass.createIndividual(Constants.BASE_URI.concat(a));
+                Resource authorInd = ontModel.createResource(Constants.BASE_URI.concat(a));
                 // WrotePaper
                 authorInd.addProperty(wrotePaper, paperInd);
                 authorInd.addProperty(fullName, author);
@@ -165,7 +159,7 @@ public class JournalAbox {
             for (String keyword : keywords) {
                 String k = URLEncoder.encode(keyword);
                 // ResearchArea
-                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                Resource researchAreaInd = ontModel.createResource(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 paperInd.addProperty(paperRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
@@ -175,7 +169,7 @@ public class JournalAbox {
             for (String keyword : journal_keywords) {
                 String k = URLEncoder.encode(keyword);
                 // ResearchArea
-                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                Resource researchAreaInd = ontModel.createResource(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 journalInd.addProperty(venueRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
@@ -186,7 +180,7 @@ public class JournalAbox {
             for (String keyword : volume_keywords) {
                 String k = URLEncoder.encode(keyword);
                 // ResearchArea
-                Individual researchAreaInd = researchAreaClass.createIndividual(Constants.BASE_URI.concat(k));
+                Resource researchAreaInd = ontModel.createResource(Constants.BASE_URI.concat(k));
                 // WrotePaper
                 volumeInd.addProperty(publicationRelatedTo, researchAreaInd);
                 researchAreaInd.addProperty(topic, keyword);
