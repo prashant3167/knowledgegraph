@@ -1167,7 +1167,7 @@
 <http://www.bdma.sdm#conf%2Facml%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Algorithm+analysis> .
 <http://www.bdma.sdm#conf%2Facml%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Data+mining> .
 <http://www.bdma.sdm#conf%2Facml%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
-<http://www.bdma.sdm#conf%2Facml%2F2011> <http://www.bdma.sdm#volume> "conf/acml/2011" .
+<http://www.bdma.sdm#conf%2Facml%2F2011> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#review_Mei+Lan+Fang_Improved+Regret+Guarantees+for+Online+Smooth+Convex+Optimization+with+Bandit+Feedback.> <http://www.bdma.sdm#text> "Consectetur voluptatem ipsum modi voluptatem." .
 <http://www.bdma.sdm#review_Mei+Lan+Fang_Improved+Regret+Guarantees+for+Online+Smooth+Convex+Optimization+with+Bandit+Feedback.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Mei+Lan+Fang_Improved+Regret+Guarantees+for+Online+Smooth+Convex+Optimization+with+Bandit+Feedback.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Improved+Regret+Guarantees+for+Online+Smooth+Convex+Optimization+with+Bandit+Feedback._AISTATS> .
@@ -1483,7 +1483,7 @@
 <http://www.bdma.sdm#conf%2Ficml%2F2010ltr> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+graphics> .
 <http://www.bdma.sdm#conf%2Ficml%2F2010ltr> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Ficml%2F2010ltr> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Data+mining> .
-<http://www.bdma.sdm#conf%2Ficml%2F2010ltr> <http://www.bdma.sdm#volume> "conf/icml/2010ltr" .
+<http://www.bdma.sdm#conf%2Ficml%2F2010ltr> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#Morteza+Alamgir> <http://www.bdma.sdm#fullName> "Morteza Alamgir" .
 <http://www.bdma.sdm#Morteza+Alamgir> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Multitask+Learning+for+Brain-Computer+Interfaces.> .
 <http://www.bdma.sdm#Data+mining> <http://www.bdma.sdm#topic> "Data mining" .
@@ -1705,7 +1705,7 @@
 <http://www.bdma.sdm#conf%2Fcolt%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Algorithm+analysis> .
 <http://www.bdma.sdm#conf%2Fcolt%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
 <http://www.bdma.sdm#conf%2Fcolt%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
-<http://www.bdma.sdm#conf%2Fcolt%2F2011> <http://www.bdma.sdm#volume> "conf/colt/2011" .
+<http://www.bdma.sdm#conf%2Fcolt%2F2011> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#Carsten+Riggelsen> <http://www.bdma.sdm#fullName> "Carsten Riggelsen" .
 <http://www.bdma.sdm#Carsten+Riggelsen> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Unsupervised+Feature+Selection+for+Pattern+Discovery+in+Seismic+Wavefields.> .
 <http://www.bdma.sdm#Jochen+Trumpf> <http://www.bdma.sdm#fullName> "Jochen Trumpf" .
@@ -2342,7 +2342,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Natural+language+processing> .
 <http://www.bdma.sdm#conf%2Faistats%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Human-computer+interaction> .
 <http://www.bdma.sdm#conf%2Faistats%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
-<http://www.bdma.sdm#conf%2Faistats%2F2009> <http://www.bdma.sdm#volume> "conf/aistats/2009" .
+<http://www.bdma.sdm#conf%2Faistats%2F2009> <http://www.bdma.sdm#publication_year> "2009" .
 <http://www.bdma.sdm#submission_Cross-Domain+Object+Matching+with+Model+Selection._AISTATS> <http://www.bdma.sdm#tovenue> <http://www.bdma.sdm#AISTATS> .
 <http://www.bdma.sdm#submission_Cross-Domain+Object+Matching+with+Model+Selection._AISTATS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bdma.sdm#Submission> .
 <http://www.bdma.sdm#Avrim+Blum> <http://www.bdma.sdm#fullName> "Avrim Blum" .
@@ -2785,7 +2785,7 @@
 <http://www.bdma.sdm#conf%2Flncs%2F1993-759> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
 <http://www.bdma.sdm#conf%2Flncs%2F1993-759> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Flncs%2F1993-759> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Artificial+intelligence> .
-<http://www.bdma.sdm#conf%2Flncs%2F1993-759> <http://www.bdma.sdm#volume> "conf/lncs/1993-759" .
+<http://www.bdma.sdm#conf%2Flncs%2F1993-759> <http://www.bdma.sdm#publication_year> "1993" .
 <http://www.bdma.sdm#Rochelle+E.+Tractenberg> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Rochelle+E.+Tractenberg_Optimal+Distributed+Market-Based+Planning+for+Multi-Agent+Systems+with+Shared+Resources.> .
 <http://www.bdma.sdm#Rochelle+E.+Tractenberg> <http://www.bdma.sdm#fullName> "Rochelle E. Tractenberg" .
 <http://www.bdma.sdm#review_Marco+Gilbert_Online+Learning%3A+Beyond+Regret.> <http://www.bdma.sdm#text> "Dolorem eius porro dolorem tempora." .
@@ -3437,7 +3437,7 @@
 <http://www.bdma.sdm#conf%2Fmlsb%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computational+complexity> .
 <http://www.bdma.sdm#conf%2Fmlsb%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
 <http://www.bdma.sdm#conf%2Fmlsb%2F2009> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Deep+learning> .
-<http://www.bdma.sdm#conf%2Fmlsb%2F2009> <http://www.bdma.sdm#volume> "conf/mlsb/2009" .
+<http://www.bdma.sdm#conf%2Fmlsb%2F2009> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#Owen+Guy> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Owen+Guy_Bayesian+inference+for+statistical+abduction+using+Markov+chain+Monte+Carlo.> .
 <http://www.bdma.sdm#Owen+Guy> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Owen+Guy_A+simple+multi-armed+bandit+algorithm+with+optimal+variation-bounded+regret.> .
 <http://www.bdma.sdm#Owen+Guy> <http://www.bdma.sdm#fullName> "Owen Guy" .
@@ -4702,7 +4702,7 @@
 <http://www.bdma.sdm#conf%2Ficgi%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Big+data> .
 <http://www.bdma.sdm#conf%2Ficgi%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
 <http://www.bdma.sdm#conf%2Ficgi%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
-<http://www.bdma.sdm#conf%2Ficgi%2F2012> <http://www.bdma.sdm#volume> "conf/icgi/2012" .
+<http://www.bdma.sdm#conf%2Ficgi%2F2012> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#Huijun+He> <http://www.bdma.sdm#fullName> "Huijun He" .
 <http://www.bdma.sdm#Huijun+He> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Nonlinear+Online+Classificatand+Michion+Algorithm+with+Probability+Margin.> .
 <http://www.bdma.sdm#Steve+R.+Gunn> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Exploration+and+Exploitation+with+Insufficient+Resources.> .
@@ -5051,7 +5051,7 @@
 <http://www.bdma.sdm#conf%2Fswee%2F1998> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Deep+learning> .
 <http://www.bdma.sdm#conf%2Fswee%2F1998> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Data+mining> .
 <http://www.bdma.sdm#conf%2Fswee%2F1998> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Machine+learning> .
-<http://www.bdma.sdm#conf%2Fswee%2F1998> <http://www.bdma.sdm#volume> "conf/swee/1998" .
+<http://www.bdma.sdm#conf%2Fswee%2F1998> <http://www.bdma.sdm#publication_year> "1998" .
 <http://www.bdma.sdm#review_Aamir+Raoof+Memon_Ellipsoidal+Machines.> <http://www.bdma.sdm#text> "Amet non eius sit modi adipisci sed." .
 <http://www.bdma.sdm#review_Aamir+Raoof+Memon_Ellipsoidal+Machines.> <http://www.bdma.sdm#decision> "accept" .
 <http://www.bdma.sdm#review_Aamir+Raoof+Memon_Ellipsoidal+Machines.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Ellipsoidal+Machines._AISTATS> .
@@ -5288,7 +5288,7 @@
 <http://www.bdma.sdm#conf%2Facml%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
 <http://www.bdma.sdm#conf%2Facml%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
 <http://www.bdma.sdm#conf%2Facml%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Machine+learning> .
-<http://www.bdma.sdm#conf%2Facml%2F2012> <http://www.bdma.sdm#volume> "conf/acml/2012" .
+<http://www.bdma.sdm#conf%2Facml%2F2012> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#Thomas+Perst> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Thomas+Perst_Stick-breaking+Construction+for+the+Indian+Buffet+Process.> .
 <http://www.bdma.sdm#Thomas+Perst> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Thomas+Perst_Visualization+of+Online+Discussion+Forums.> .
 <http://www.bdma.sdm#Thomas+Perst> <http://www.bdma.sdm#fullName> "Thomas Perst" .
@@ -5736,7 +5736,7 @@
 <http://www.bdma.sdm#conf%2Fcolt%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
 <http://www.bdma.sdm#conf%2Fcolt%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
 <http://www.bdma.sdm#conf%2Fcolt%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Information+theory> .
-<http://www.bdma.sdm#conf%2Fcolt%2F2012> <http://www.bdma.sdm#volume> "conf/colt/2012" .
+<http://www.bdma.sdm#conf%2Fcolt%2F2012> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#Donald+D.+Chamberlin> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Donald+D.+Chamberlin_Application+of+Additive+Groves+Ensemble+with+Multiple+Counts+Feature+Evaluation+to+KDD+Cup%2709+Small+Data+Set.> .
 <http://www.bdma.sdm#Donald+D.+Chamberlin> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Donald+D.+Chamberlin_Reconstruction+from+Anisotropic+Random+Measurements.> .
 <http://www.bdma.sdm#Donald+D.+Chamberlin> <http://www.bdma.sdm#fullName> "Donald D. Chamberlin" .
@@ -7428,7 +7428,7 @@
 <http://www.bdma.sdm#conf%2Fwapa%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Artificial+intelligence> .
 <http://www.bdma.sdm#conf%2Fwapa%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+vision> .
 <http://www.bdma.sdm#conf%2Fwapa%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
-<http://www.bdma.sdm#conf%2Fwapa%2F2010> <http://www.bdma.sdm#volume> "conf/wapa/2010" .
+<http://www.bdma.sdm#conf%2Fwapa%2F2010> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#submission_Hierarchical+Probabilistic+Models+for+Group+Anomaly+Detection._AISTATS> <http://www.bdma.sdm#tovenue> <http://www.bdma.sdm#AISTATS> .
 <http://www.bdma.sdm#submission_Hierarchical+Probabilistic+Models+for+Group+Anomaly+Detection._AISTATS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bdma.sdm#Submission> .
 <http://www.bdma.sdm#A+Conjugate+Property+between+Loss+Functions+and+Uncertainty+Sets+in+Classification+Problems.> <http://www.bdma.sdm#publishedin> <http://www.bdma.sdm#conf%2Fcolt%2F2012> .
@@ -9883,7 +9883,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
 <http://www.bdma.sdm#conf%2Faistats%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
 <http://www.bdma.sdm#conf%2Faistats%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+vision> .
-<http://www.bdma.sdm#conf%2Faistats%2F2010> <http://www.bdma.sdm#volume> "conf/aistats/2010" .
+<http://www.bdma.sdm#conf%2Faistats%2F2010> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#Michael+Davis+0002> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Michael+Davis+0002_Sparsity+Regret+Bounds+for+Individual+Sequences+in+Online+Linear+Regression.> .
 <http://www.bdma.sdm#Michael+Davis+0002> <http://www.bdma.sdm#fullName> "Michael Davis 0002" .
 <http://www.bdma.sdm#Nello+Cristianini> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Automating+News+Content+Analysis%3A+An+Application+to+Gender+Bias+and+Readability.> .
@@ -11624,7 +11624,7 @@
 <http://www.bdma.sdm#conf%2Fwapa%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
 <http://www.bdma.sdm#conf%2Fwapa%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
 <http://www.bdma.sdm#conf%2Fwapa%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Information+theory> .
-<http://www.bdma.sdm#conf%2Fwapa%2F2011> <http://www.bdma.sdm#volume> "conf/wapa/2011" .
+<http://www.bdma.sdm#conf%2Fwapa%2F2011> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#Jennifer+G.+Dy> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#A+Nonparametric+Bayesian+Model+for+Multiple+Clustering+with+Overlapping+Feature+Views.> .
 <http://www.bdma.sdm#Jennifer+G.+Dy> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Modeling+annotator+expertise%3A+Learning+when+everybody+knows+a+bit+of+something.> .
 <http://www.bdma.sdm#Jennifer+G.+Dy> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Active+Learning+from+Multiple+Knowledge+Sources.> .
@@ -12567,7 +12567,7 @@
 <http://www.bdma.sdm#conf%2Fkdd%2F2011kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Quantum+computing> .
 <http://www.bdma.sdm#conf%2Fkdd%2F2011kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cryptography> .
 <http://www.bdma.sdm#conf%2Fkdd%2F2011kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
-<http://www.bdma.sdm#conf%2Fkdd%2F2011kddcup> <http://www.bdma.sdm#volume> "conf/kdd/2011kddcup" .
+<http://www.bdma.sdm#conf%2Fkdd%2F2011kddcup> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#Neha+Baryah> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Neha+Baryah_Generative+Models+of+Information+Diffusion+with+Asynchronous+Timedelay.> .
 <http://www.bdma.sdm#Neha+Baryah> <http://www.bdma.sdm#fullName> "Neha Baryah" .
 <http://www.bdma.sdm#Steven+C.+H.+Hoi> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Two-Layer+Multiple+Kernel+Learning.> .
@@ -13913,7 +13913,7 @@
 <http://www.bdma.sdm#conf%2Flncs%2F1994-910> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Machine+learning> .
 <http://www.bdma.sdm#conf%2Flncs%2F1994-910> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
 <http://www.bdma.sdm#conf%2Flncs%2F1994-910> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Algorithm+analysis> .
-<http://www.bdma.sdm#conf%2Flncs%2F1994-910> <http://www.bdma.sdm#volume> "conf/lncs/1994-910" .
+<http://www.bdma.sdm#conf%2Flncs%2F1994-910> <http://www.bdma.sdm#publication_year> "1994" .
 <http://www.bdma.sdm#Seppo+Virtanen> <http://www.bdma.sdm#fullName> "Seppo Virtanen" .
 <http://www.bdma.sdm#Seppo+Virtanen> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Bayesian+Group+Factor+Analysis.> .
 <http://www.bdma.sdm#Chun-Nan+Hsu> <http://www.bdma.sdm#fullName> "Chun-Nan Hsu" .
@@ -14012,7 +14012,7 @@
 <http://www.bdma.sdm#conf%2Ficml%2F2011otee> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Algorithm+analysis> .
 <http://www.bdma.sdm#conf%2Ficml%2F2011otee> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Information+theory> .
 <http://www.bdma.sdm#conf%2Ficml%2F2011otee> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cloud+computing> .
-<http://www.bdma.sdm#conf%2Ficml%2F2011otee> <http://www.bdma.sdm#volume> "conf/icml/2011otee" .
+<http://www.bdma.sdm#conf%2Ficml%2F2011otee> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#submission_TopicFlow+Model%3A+Unsupervised+Learning+of+Topic-specific+Influences+of+Hyperlinked+Documents._AISTATS> <http://www.bdma.sdm#tovenue> <http://www.bdma.sdm#AISTATS> .
 <http://www.bdma.sdm#submission_TopicFlow+Model%3A+Unsupervised+Learning+of+Topic-specific+Influences+of+Hyperlinked+Documents._AISTATS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bdma.sdm#Submission> .
 <http://www.bdma.sdm#Peter+Sturm+0001> <http://www.bdma.sdm#wrotereview> <http://www.bdma.sdm#review_Peter+Sturm+0001_Random+Design+Analysis+of+Ridge+Regression.> .
@@ -14096,7 +14096,7 @@
 <http://www.bdma.sdm#conf%2Fwcci%2F2008cpc> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cryptography> .
 <http://www.bdma.sdm#conf%2Fwcci%2F2008cpc> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Fwcci%2F2008cpc> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+graphics> .
-<http://www.bdma.sdm#conf%2Fwcci%2F2008cpc> <http://www.bdma.sdm#volume> "conf/wcci/2008cpc" .
+<http://www.bdma.sdm#conf%2Fwcci%2F2008cpc> <http://www.bdma.sdm#publication_year> "2008" .
 <http://www.bdma.sdm#Yahoo%21+Learning+to+Rank+Challenge> <http://www.bdma.sdm#venuerelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#Yahoo%21+Learning+to+Rank+Challenge> <http://www.bdma.sdm#venuerelatedto> <http://www.bdma.sdm#Human-computer+interaction> .
 <http://www.bdma.sdm#Yahoo%21+Learning+to+Rank+Challenge> <http://www.bdma.sdm#venuerelatedto> <http://www.bdma.sdm#Cybersecurity> .
@@ -14336,7 +14336,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+graphics> .
 <http://www.bdma.sdm#conf%2Faistats%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+vision> .
 <http://www.bdma.sdm#conf%2Faistats%2F2011> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Artificial+intelligence> .
-<http://www.bdma.sdm#conf%2Faistats%2F2011> <http://www.bdma.sdm#volume> "conf/aistats/2011" .
+<http://www.bdma.sdm#conf%2Faistats%2F2011> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#review_Carlo+Bellecci_Robust+Interactive+Learning.> <http://www.bdma.sdm#text> "Amet numquam etincidunt etincidunt labore quaerat sed." .
 <http://www.bdma.sdm#review_Carlo+Bellecci_Robust+Interactive+Learning.> <http://www.bdma.sdm#decision> "accept" .
 <http://www.bdma.sdm#review_Carlo+Bellecci_Robust+Interactive+Learning.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Robust+Interactive+Learning._COLT> .
@@ -14890,7 +14890,7 @@
 <http://www.bdma.sdm#conf%2Fkdd%2F2009kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
 <http://www.bdma.sdm#conf%2Fkdd%2F2009kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+graphics> .
 <http://www.bdma.sdm#conf%2Fkdd%2F2009kddcup> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+vision> .
-<http://www.bdma.sdm#conf%2Fkdd%2F2009kddcup> <http://www.bdma.sdm#volume> "conf/kdd/2009kddcup" .
+<http://www.bdma.sdm#conf%2Fkdd%2F2009kddcup> <http://www.bdma.sdm#publication_year> "2009" .
 <http://www.bdma.sdm#review_Savita+Lasrado_Loopy+Belief+Propagation+for+Bipartite+Maximum+Weight+b-Matching.> <http://www.bdma.sdm#text> "Quisquam numquam ipsum quisquam dolorem non." .
 <http://www.bdma.sdm#review_Savita+Lasrado_Loopy+Belief+Propagation+for+Bipartite+Maximum+Weight+b-Matching.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Savita+Lasrado_Loopy+Belief+Propagation+for+Bipartite+Maximum+Weight+b-Matching.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Loopy+Belief+Propagation+for+Bipartite+Maximum+Weight+b-Matching._AISTATS> .
@@ -15188,7 +15188,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2007> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
 <http://www.bdma.sdm#conf%2Faistats%2F2007> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Human-computer+interaction> .
 <http://www.bdma.sdm#conf%2Faistats%2F2007> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Artificial+intelligence> .
-<http://www.bdma.sdm#conf%2Faistats%2F2007> <http://www.bdma.sdm#volume> "conf/aistats/2007" .
+<http://www.bdma.sdm#conf%2Faistats%2F2007> <http://www.bdma.sdm#publication_year> "2007" .
 <http://www.bdma.sdm#submission_Adaptive+MCMC+with+Bayesian+Optimization._AISTATS> <http://www.bdma.sdm#tovenue> <http://www.bdma.sdm#AISTATS> .
 <http://www.bdma.sdm#submission_Adaptive+MCMC+with+Bayesian+Optimization._AISTATS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bdma.sdm#Submission> .
 <http://www.bdma.sdm#review_Paul+Jones+0001_Dynamic+Policy+Programming+with+Function+Approximation.> <http://www.bdma.sdm#text> "Ipsum magnam labore labore non quiquia quisquam sit." .
@@ -15470,7 +15470,7 @@
 <http://www.bdma.sdm#conf%2Fds%2F1974> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Information+theory> .
 <http://www.bdma.sdm#conf%2Fds%2F1974> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+networks> .
 <http://www.bdma.sdm#conf%2Fds%2F1974> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cryptography> .
-<http://www.bdma.sdm#conf%2Fds%2F1974> <http://www.bdma.sdm#volume> "conf/ds/1974" .
+<http://www.bdma.sdm#conf%2Fds%2F1974> <http://www.bdma.sdm#publication_year> "1974" .
 <http://www.bdma.sdm#Suleiman+A.+Khan> <http://www.bdma.sdm#fullName> "Suleiman A. Khan" .
 <http://www.bdma.sdm#Suleiman+A.+Khan> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Bayesian+Group+Factor+Analysis.> .
 <http://www.bdma.sdm#Vincent+Lemaire+0001> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#ICML2011+Unsupervised+and+Transfer+Learning+Workshop.> .
@@ -16150,7 +16150,7 @@
 <http://www.bdma.sdm#conf%2Flncs%2F1991-546> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Flncs%2F1991-546> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Data+mining> .
 <http://www.bdma.sdm#conf%2Flncs%2F1991-546> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Quantum+computing> .
-<http://www.bdma.sdm#conf%2Flncs%2F1991-546> <http://www.bdma.sdm#volume> "conf/lncs/1991-546" .
+<http://www.bdma.sdm#conf%2Flncs%2F1991-546> <http://www.bdma.sdm#publication_year> "1991" .
 <http://www.bdma.sdm#review_Montse+Serra_Maximum+Likelihood+vs.+Sequential+Normalized+Maximum+Likelihood+in+On-line+Density+Estimation.> <http://www.bdma.sdm#text> "Sed quisquam aliquam ut." .
 <http://www.bdma.sdm#review_Montse+Serra_Maximum+Likelihood+vs.+Sequential+Normalized+Maximum+Likelihood+in+On-line+Density+Estimation.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Montse+Serra_Maximum+Likelihood+vs.+Sequential+Normalized+Maximum+Likelihood+in+On-line+Density+Estimation.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Maximum+Likelihood+vs.+Sequential+Normalized+Maximum+Likelihood+in+On-line+Density+Estimation._COLT> .
@@ -16159,7 +16159,7 @@
 <http://www.bdma.sdm#conf%2Fnips%2F2008coa> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Machine+learning> .
 <http://www.bdma.sdm#conf%2Fnips%2F2008coa> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
 <http://www.bdma.sdm#conf%2Fnips%2F2008coa> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
-<http://www.bdma.sdm#conf%2Fnips%2F2008coa> <http://www.bdma.sdm#volume> "conf/nips/2008coa" .
+<http://www.bdma.sdm#conf%2Fnips%2F2008coa> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#Daniel+Kifer> <http://www.bdma.sdm#fullName> "Daniel Kifer" .
 <http://www.bdma.sdm#Daniel+Kifer> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Private+Convex+Optimization+for+Empirical+Risk+Minimization+with+Applications+to+High-dimensional+Regression.> .
 <http://www.bdma.sdm#Andy+Way> <http://www.bdma.sdm#fullName> "Andy Way" .
@@ -16946,7 +16946,7 @@
 <http://www.bdma.sdm#conf%2Fpakdd%2F2010fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+vision> .
 <http://www.bdma.sdm#conf%2Fpakdd%2F2010fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
 <http://www.bdma.sdm#conf%2Fpakdd%2F2010fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Algorithm+analysis> .
-<http://www.bdma.sdm#conf%2Fpakdd%2F2010fsdm> <http://www.bdma.sdm#volume> "conf/pakdd/2010fsdm" .
+<http://www.bdma.sdm#conf%2Fpakdd%2F2010fsdm> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#review_Saeed+Banihashemi_The+Trace+of+Building+a+Large+AI+System.> <http://www.bdma.sdm#text> "Non non adipisci voluptatem." .
 <http://www.bdma.sdm#review_Saeed+Banihashemi_The+Trace+of+Building+a+Large+AI+System.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Saeed+Banihashemi_The+Trace+of+Building+a+Large+AI+System.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_The+Trace+of+Building+a+Large+AI+System._Text+Understanding+in+LILOG> .
@@ -17518,7 +17518,7 @@
 <http://www.bdma.sdm#conf%2Ficml%2F2011utl> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+networks> .
 <http://www.bdma.sdm#conf%2Ficml%2F2011utl> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Robotics> .
 <http://www.bdma.sdm#conf%2Ficml%2F2011utl> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
-<http://www.bdma.sdm#conf%2Ficml%2F2011utl> <http://www.bdma.sdm#volume> "conf/icml/2011utl" .
+<http://www.bdma.sdm#conf%2Ficml%2F2011utl> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#Quilting+Stochastic+Kronecker+Product+Graphs+to+Generate+Multiplicative+Attribute+Graphs.> <http://www.bdma.sdm#url> "http://proceedings.mlr.press/v22/yun12.html" .
 <http://www.bdma.sdm#Quilting+Stochastic+Kronecker+Product+Graphs+to+Generate+Multiplicative+Attribute+Graphs.> <http://www.bdma.sdm#key> "journals/jmlr/YunV12" .
 <http://www.bdma.sdm#Quilting+Stochastic+Kronecker+Product+Graphs+to+Generate+Multiplicative+Attribute+Graphs.> <http://www.bdma.sdm#paperrelatedto> <http://www.bdma.sdm#Cryptography> .
@@ -17863,7 +17863,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2010w> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Human-computer+interaction> .
 <http://www.bdma.sdm#conf%2Faistats%2F2010w> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Artificial+intelligence> .
 <http://www.bdma.sdm#conf%2Faistats%2F2010w> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Data+mining> .
-<http://www.bdma.sdm#conf%2Faistats%2F2010w> <http://www.bdma.sdm#volume> "conf/aistats/2010w" .
+<http://www.bdma.sdm#conf%2Faistats%2F2010w> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#review_Alejandro+P.+Buchmann_Hybrid+Recommendation+Models+for+Binary+User+Preference+Prediction+Problem.> <http://www.bdma.sdm#text> "Aliquam eius adipisci velit eius porro magnam." .
 <http://www.bdma.sdm#review_Alejandro+P.+Buchmann_Hybrid+Recommendation+Models+for+Binary+User+Preference+Prediction+Problem.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Alejandro+P.+Buchmann_Hybrid+Recommendation+Models+for+Binary+User+Preference+Prediction+Problem.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Hybrid+Recommendation+Models+for+Binary+User+Preference+Prediction+Problem._KDD+Cup> .
@@ -18180,7 +18180,7 @@
 <http://www.bdma.sdm#conf%2Fpkdd%2F2008fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Fpkdd%2F2008fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cybersecurity> .
 <http://www.bdma.sdm#conf%2Fpkdd%2F2008fsdm> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Human-computer+interaction> .
-<http://www.bdma.sdm#conf%2Fpkdd%2F2008fsdm> <http://www.bdma.sdm#volume> "conf/pkdd/2008fsdm" .
+<http://www.bdma.sdm#conf%2Fpkdd%2F2008fsdm> <http://www.bdma.sdm#publication_year> "2008" .
 <http://www.bdma.sdm#review_Matthew+Benjamin+Reisman_Sortal+Information+in+Lexical+Concepts.> <http://www.bdma.sdm#text> "Sed dolor aliquam quisquam." .
 <http://www.bdma.sdm#review_Matthew+Benjamin+Reisman_Sortal+Information+in+Lexical+Concepts.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Matthew+Benjamin+Reisman_Sortal+Information+in+Lexical+Concepts.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Sortal+Information+in+Lexical+Concepts._Text+Understanding+in+LILOG> .
@@ -18359,7 +18359,7 @@
 <http://www.bdma.sdm#conf%2Facml%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Facml%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Information+theory> .
 <http://www.bdma.sdm#conf%2Facml%2F2010> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+networks> .
-<http://www.bdma.sdm#conf%2Facml%2F2010> <http://www.bdma.sdm#volume> "conf/acml/2010" .
+<http://www.bdma.sdm#conf%2Facml%2F2010> <http://www.bdma.sdm#publication_year> "2010" .
 <http://www.bdma.sdm#review_Syed+Ather+Hussain_Beyond+Semilinearity%3A+Distributional+Learning+of+Parallel+Multiple+Context-free+Grammars.> <http://www.bdma.sdm#text> "Quiquia aliquam ipsum dolor est quisquam." .
 <http://www.bdma.sdm#review_Syed+Ather+Hussain_Beyond+Semilinearity%3A+Distributional+Learning+of+Parallel+Multiple+Context-free+Grammars.> <http://www.bdma.sdm#decision> "reject" .
 <http://www.bdma.sdm#review_Syed+Ather+Hussain_Beyond+Semilinearity%3A+Distributional+Learning+of+Parallel+Multiple+Context-free+Grammars.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Beyond+Semilinearity%3A+Distributional+Learning+of+Parallel+Multiple+Context-free+Grammars._ICGI> .
@@ -18577,7 +18577,7 @@
 <http://www.bdma.sdm#conf%2Faistats%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+networks> .
 <http://www.bdma.sdm#conf%2Faistats%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Machine+learning> .
 <http://www.bdma.sdm#conf%2Faistats%2F2012> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Distributed+computing> .
-<http://www.bdma.sdm#conf%2Faistats%2F2012> <http://www.bdma.sdm#volume> "conf/aistats/2012" .
+<http://www.bdma.sdm#conf%2Faistats%2F2012> <http://www.bdma.sdm#publication_year> "2012" .
 <http://www.bdma.sdm#review_Nithin+Kumar_Learning+a+Nonlinear+Embedding+by+Preserving+Class+Neighbourhood+Structure.> <http://www.bdma.sdm#text> "Labore quaerat voluptatem numquam quisquam numquam." .
 <http://www.bdma.sdm#review_Nithin+Kumar_Learning+a+Nonlinear+Embedding+by+Preserving+Class+Neighbourhood+Structure.> <http://www.bdma.sdm#decision> "accept" .
 <http://www.bdma.sdm#review_Nithin+Kumar_Learning+a+Nonlinear+Embedding+by+Preserving+Class+Neighbourhood+Structure.> <http://www.bdma.sdm#reviewfor> <http://www.bdma.sdm#submission_Learning+a+Nonlinear+Embedding+by+Preserving+Class+Neighbourhood+Structure._AISTATS> .
@@ -19424,7 +19424,7 @@
 <http://www.bdma.sdm#conf%2Fnips%2F2009mscts> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Computer+networks> .
 <http://www.bdma.sdm#conf%2Fnips%2F2009mscts> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cryptography> .
 <http://www.bdma.sdm#conf%2Fnips%2F2009mscts> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Deep+learning> .
-<http://www.bdma.sdm#conf%2Fnips%2F2009mscts> <http://www.bdma.sdm#volume> "conf/nips/2009mscts" .
+<http://www.bdma.sdm#conf%2Fnips%2F2009mscts> <http://www.bdma.sdm#publication_year> "2011" .
 <http://www.bdma.sdm#Marine+Campedel> <http://www.bdma.sdm#fullName> "Marine Campedel" .
 <http://www.bdma.sdm#Marine+Campedel> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Unsupervised+feature+selection+applied+to+SPOT5+satellite+images+indexing.> .
 <http://www.bdma.sdm#Kristian+Kersting> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Hierarchical+Convex+NMF+for+Clustering+Massive+Data.> .
@@ -20563,7 +20563,7 @@
 <http://www.bdma.sdm#conf%2Fjmlr%2F2006gpp> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Deep+learning> .
 <http://www.bdma.sdm#conf%2Fjmlr%2F2006gpp> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#High-performance+computing> .
 <http://www.bdma.sdm#conf%2Fjmlr%2F2006gpp> <http://www.bdma.sdm#publicationrelatedto> <http://www.bdma.sdm#Cryptography> .
-<http://www.bdma.sdm#conf%2Fjmlr%2F2006gpp> <http://www.bdma.sdm#volume> "conf/jmlr/2006gpp" .
+<http://www.bdma.sdm#conf%2Fjmlr%2F2006gpp> <http://www.bdma.sdm#publication_year> "2007" .
 <http://www.bdma.sdm#Igino+Corona> <http://www.bdma.sdm#fullName> "Igino Corona" .
 <http://www.bdma.sdm#Igino+Corona> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Detection+of+Server-side+Web+Attacks.> .
 <http://www.bdma.sdm#Shuicheng+Yan> <http://www.bdma.sdm#wrotepaper> <http://www.bdma.sdm#Exact+Subspace+Segmentation+and+Outlier+Detection+by+Low-Rank+Representation.> .

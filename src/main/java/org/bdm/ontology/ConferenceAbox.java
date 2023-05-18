@@ -56,12 +56,12 @@ public class ConferenceAbox {
         DatatypeProperty decision = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("decision"));
         DatatypeProperty paperTitle = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("paper_title"));
         DatatypeProperty venueTitle = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("venue_title"));
-        DatatypeProperty volumeProperty = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("volume"));
         DatatypeProperty fullName = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("fullName"));
         DatatypeProperty topic = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("topic"));
         DatatypeProperty publishDate = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("publish_date"));
         DatatypeProperty url = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("url"));
         DatatypeProperty key = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("key"));
+        DatatypeProperty publicationYear = ontModel.getDatatypeProperty(Constants.BASE_URI.concat("publication_year"));
 
         //Read journal.csv
         BufferedReader csvReader = new BufferedReader(new FileReader(Constants.CONFERENCE_PATH));
@@ -111,7 +111,7 @@ public class ConferenceAbox {
             // proceeding is conference is  crossref
             //Individual proceedingsInd = proceedingsClass.createIndividual(Constants.BASE_URI.concat(Proceedings));
             Resource proceedingsInd = ontModel.createResource(Constants.BASE_URI.concat(Proceedings));
-            proceedingsInd.addProperty(volumeProperty, record.get("crossref").replace("journals","conf"));
+            proceedingsInd.addProperty(publicationYear, record.get("year").replace("journals","conf"));
 
             // HasProceedings
             conferenceInd.addProperty(HasProceedings, proceedingsInd);
