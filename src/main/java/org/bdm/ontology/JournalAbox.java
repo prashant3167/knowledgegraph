@@ -26,7 +26,6 @@ public class JournalAbox {
         OntClass shortPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("ShortPaper") );
         OntClass demoPaperClass = ontModel.getOntClass( Constants.BASE_URI.concat("DemoPaper") );
         OntClass posterClass = ontModel.getOntClass( Constants.BASE_URI.concat("Poster") );
-        OntClass journalClass = ontModel.getOntClass( Constants.BASE_URI.concat("Journal") );
 
         //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
@@ -80,7 +79,7 @@ public class JournalAbox {
 
             // Journal
             String journal = URLEncoder.encode(record.get("journal"));
-            Individual journalInd = journalClass.createIndividual(Constants.BASE_URI.concat(journal));
+            Resource journalInd = ontModel.createResource(Constants.BASE_URI.concat(journal));
             journalInd.addProperty(venueTitle, record.get("journal"));
 
             // Volume

@@ -35,7 +35,6 @@ public class ConferenceAbox {
         OntClass workshopClass = ontModel.getOntClass( Constants.BASE_URI.concat("Workshop") );
         OntClass symposiumClass = ontModel.getOntClass( Constants.BASE_URI.concat("Symposium") );
         OntClass expertGroupClass = ontModel.getOntClass( Constants.BASE_URI.concat("ExpertGroup") );
-        OntClass submissionClass = ontModel.getOntClass( Constants.BASE_URI.concat("Submission") );
 
         //Object Properties
         OntProperty wrotePaper = ontModel.getOntProperty( Constants.BASE_URI.concat("wrotepaper") );
@@ -117,7 +116,7 @@ public class ConferenceAbox {
             conferenceInd.addProperty(HasProceedings, proceedingsInd);
 
             // Submission
-            Individual submissionInd = submissionClass.createIndividual(Constants.BASE_URI.concat("submission_"+paper+"_"+conference));
+            Resource submissionInd = ontModel.createResource(Constants.BASE_URI.concat("submission_"+paper+"_"+conference));
             paperInd.addProperty(inSubmission, submissionInd);
             submissionInd.addProperty(toVenue, conferenceInd);
 
