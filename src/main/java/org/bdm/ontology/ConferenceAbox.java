@@ -213,9 +213,6 @@ public class ConferenceAbox {
             // Additional properties
             paperInd.addProperty(key, record.get("key"));
             paperInd.addProperty(url, record.get("ee"));
-
-            // Limit number of articles loaded
-            if (++cnt >= Constants.MAX_ARTICLES) break;
         }
 
         FileOutputStream writerStream = new FileOutputStream( Constants.CONFERENCE_OUTPUT );

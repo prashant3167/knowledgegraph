@@ -8,6 +8,4 @@ public class Constants {
 
     public static final String CONFERENCE_PATH = "data/conference.csv";
     public static final String CONFERENCE_OUTPUT = "data/conference_abox.nt";
-
-    public static final int MAX_ARTICLES = 800;
 }
