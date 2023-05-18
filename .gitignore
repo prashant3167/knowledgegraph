@@ -11,12 +11,6 @@ target/
 *.iws
 *.iml
 *.ipr
-data/output_*
-data/test*
-data/*BOX*
-data/ABOX.nt
-data/*dblp*
-
 
 ### Eclipse ###
 .apt_generated
@@ -43,6 +37,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Large data files ###
-data/output_article.csv
-/data/dblp-to-csv/
+### Large Files ###
+data/*.csv
