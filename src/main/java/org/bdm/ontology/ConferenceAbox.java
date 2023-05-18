@@ -89,7 +89,7 @@ public class ConferenceAbox {
 
             // ConferenceAbox
             String conference = URLEncoder.encode(record.get("booktitle"));
-            String conferenceType = URLEncoder.encode(record.get("conference_type"));
+            String conferenceType = record.get("conference_type");
             Individual conferenceInd = null;
             if (conferenceType.equals("Regular"))
                 conferenceInd = RegularConferenceClass.createIndividual(Constants.BASE_URI.concat(conference));
@@ -101,8 +101,7 @@ public class ConferenceAbox {
                 conferenceInd = expertGroupClass.createIndividual(Constants.BASE_URI.concat(conference));
             else
                 conferenceInd = conferenceClass.createIndividual(Constants.BASE_URI.concat(conference));
-//            Individual journalInd = conferenceClass.createIndividual(Constants.BASE_URI.concat(journal));
-            conferenceInd.addProperty(venueTitle, record.get("booktitle"));
+           conferenceInd.addProperty(venueTitle, record.get("booktitle"));
 
             // Procedings
             // It will be only added if accepted by reviewr
